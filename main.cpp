@@ -67,35 +67,35 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 
 // 2)
 void variableDeclarations() {
-  // example:
-  int number =
-      2; // declaration of a variable named "number", that uses the primitive
-         // type 'int', and the variable's initial value is '2'
-  int numOfStudents = 10;
-  int age = 25;
-  int numOfCats = 32;
-
-  float price = 15.99f;
-  float quarter = 0.25f;
-  float avg = 1.5f;
-
-  double pi = 3.14159;
-  double oneThird = 0.3333333;
-  double almostOne = 0.999999;
-
-  char firstLetter = 'a';
-  char lastLetter = 'z';
-  char myFirstLetter = 'g';
-
-  bool playsPiano = true;
-  bool isClickable = false;
-  bool lovesCats = true;
-
-  ignoreUnused(number, numOfStudents, age, numOfCats, price, quarter, avg, pi,
-               oneThird, almostOne, firstLetter, lastLetter, myFirstLetter,
-               playsPiano, isClickable,
-               lovesCats); // passing each variable declared to the
-                           // ignoreUnused() function
+    // example:
+    int number =
+        2; // declaration of a variable named "number", that uses the primitive
+           // type 'int', and the variable's initial value is '2'
+    int numOfStudents = 10;
+    int age = 25;
+    int numOfCats = 32;
+  
+    float price = 15.99f;
+    float quarter = 0.25f;
+    float avg = 1.5f;
+  
+    double pi = 3.14159;
+    double oneThird = 0.3333333;
+    double almostOne = 0.999999;
+  
+    char firstLetter = 'a';
+    char lastLetter = 'z';
+    char myFirstLetter = 'g';
+  
+    bool playsPiano = true;
+    bool isClickable = false;
+    bool lovesCats = true;
+  
+    ignoreUnused(number, numOfStudents, age, numOfCats, price, quarter, avg, pi,
+                 oneThird, almostOne, firstLetter, lastLetter, myFirstLetter,
+                 playsPiano, isClickable,
+                 lovesCats); // passing each variable declared to the
+                             // ignoreUnused() function
 }
 
 /*
@@ -103,10 +103,8 @@ void variableDeclarations() {
  example:
  note: this example shows the result after completing steps 3-8
  */
-bool rentACar(
-    int rentalDuration,
-    int carType = 0) // function declaration with random number of arguments,
-                     // arbitrary number of arguments have default value
+bool rentACar(int rentalDuration, int carType = 0) // function declaration with random number of arguments,
+                                                    // arbitrary number of arguments have default value
 {
   ignoreUnused(rentalDuration, carType); // passing each function parameter to
                                          // the ignoreUnused() function
@@ -117,83 +115,93 @@ bool rentACar(
 /*
  1)
  */
-int addTwoNums(int num1 = 15, int num2 = 33) {
-  ignoreUnused(num1, num2);
-
-  return {};
+int addTwoNums(int num1 = 15, int num2 = 33) 
+{
+    ignoreUnused(num1, num2);  
+    return {};
 }
+
 /*
  2)
  */
-bool isTimeForBed(int hour = 20) {
-  ignoreUnused(hour);
-
-  return {};
+bool isTimeForBed(int hour = 20) 
+{
+    ignoreUnused(hour);
+    return {};
 }
+
 /*
  3)
  */
-float getAverageGrade(int grade1 = 90, int grade2 = 80, int grade3 = 70) {
-  ignoreUnused(grade1, grade2, grade3);
-
-  return {};
+float getAverageGrade(int grade1 = 90, int grade2 = 80, int grade3 = 70) 
+{
+    ignoreUnused(grade1, grade2, grade3);
+    return {};
 }
+
 /*
  4)
  */
-bool isAVowel(char letter = 'o') {
-  ignoreUnused(letter);
-
-  return {};
+bool isAVowel(char letter = 'o') 
+{
+    ignoreUnused(letter);
+    return {};
 }
+
 /*
  5)
  */
-bool isDivisibleBy(int numerator = 10, int denominator = 5) {
-  ignoreUnused(numerator, denominator);
-
-  return {};
+bool isDivisibleBy(int numerator = 10, int denominator = 5) 
+{
+    ignoreUnused(numerator, denominator);
+    return {};
 }
+
 /*
  6)
  */
-float getDistance(int speed = 60, float time = 1.5f) {
-  ignoreUnused(speed, time);
-
-  return {};
+float getDistance(int speed = 60, float time = 1.5f)
+{
+    ignoreUnused(speed, time);
+    return {};
 }
+
 /*
  7)
  */
-int getRandomNumber(int min = 0, int max = 100) {
-  ignoreUnused(min, max);
-
-  return {};
+int getRandomNumber(int min = 0, int max = 100) 
+{
+    ignoreUnused(min, max);
+    return {};
 }
+
 /*
  8)
  */
-bool isFridayThe13th(int month = 9, int day = 13) {
-  ignoreUnused(month, day);
-
-  return {};
+bool isFridayThe13th(int month = 9, int day = 13) 
+{
+    ignoreUnused(month, day);
+    return {};
 }
+
 /*
  9)
  */
-bool canLevelUp(int currentLevel = 3, int experiencePoints = 1000) {
-  ignoreUnused(currentLevel, experiencePoints);
-
-  return {};
+bool canLevelUp(int currentLevel = 3, int experiencePoints = 1000) 
+{
+    ignoreUnused(currentLevel, experiencePoints);
+    return {};
 }
+
 /*
  10)
  */
-int canVote(int age = 18) {
-  ignoreUnused(age);
-
-  return {};
+int canVote(int age = 18) 
+{
+    ignoreUnused(age);
+    return {};
 }
+
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -211,33 +219,33 @@ int canVote(int age = 18) {
  */
 
 int main() {
-  // example of calling that function, storing the value, and passing it to
-  // ignoreUnused at the end of main()
-  auto carRented = rentACar(6, 2);
-
-  // 1)
-  auto sum = addTwoNums(5, 10);
-  // 2)
-  auto bedTime = isTimeForBed(12);
-  // 3)
-  auto studentGPA = getAverageGrade(75, 92, 88);
-  // 4)
-  auto isVowel = isAVowel('a');
-  // 5)
-  auto isDivisible = isDivisibleBy(99, 6);
-  // 6)
-  auto distance = getDistance(120, 3.0f);
-  // 7)
-  auto randomNum = getRandomNumber(1, 10);
-  // 8)
-  auto isFriday = isFridayThe13th(12, 13);
-  // 9)
-  auto canLevel = canLevelUp(5, 2000);
-  // 10)
-  auto ableToVote = canVote(17);
-
-  ignoreUnused(carRented, sum, bedTime, studentGPA, isVowel, isDivisible,
-               distance, randomNum, isFriday, canLevel, ableToVote);
-  std::cout << "good to go!" << std::endl;
-  return 0;
+    // example of calling that function, storing the value, and passing it to
+    // ignoreUnused at the end of main()
+    auto carRented = rentACar(6, 2);
+  
+    // 1)
+    auto sum = addTwoNums(5, 10);
+    // 2)
+    auto bedTime = isTimeForBed(12);
+    // 3)
+    auto studentGPA = getAverageGrade(75, 92, 88);
+    // 4)
+    auto isVowel = isAVowel('a');
+    // 5)
+    auto isDivisible = isDivisibleBy(99, 6);
+    // 6)
+    auto distance = getDistance(120, 3.0f);
+    // 7)
+    auto randomNum = getRandomNumber(1, 10);
+    // 8)
+    auto isFriday = isFridayThe13th(12, 13);
+    // 9)
+    auto canLevel = canLevelUp(5, 2000);
+    // 10)
+    auto ableToVote = canVote(17);
+  
+    ignoreUnused(carRented, sum, bedTime, studentGPA, isVowel, isDivisible,
+                 distance, randomNum, isFriday, canLevel, ableToVote);
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
